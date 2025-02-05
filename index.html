@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fotogram</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./img/assets/favicon_fotogram.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header id="header" class="padding-responive">
+      <div>
+        <div class="header_title">
+          <img
+            class="logo"
+            src="./img/assets/favicon_fotogram.png"
+            alt="Logo Fotogram"
+          />
+          <h1>Fotogram</h1>
+        </div>
+
+        <div class="header_addition"></div>
+      </div>
+
+      <img
+        id="darkmode_toggle"
+        class="darkmode_on"
+        onclick="DarkmodeToggle()"
+        src="./img/assets/dark-mode.svg"
+      />
+    </header>
+
+    <main id="main">
+      <div
+        onclick="closeCurrentPhoto()"
+        id="overlay"
+        class="overlay d_none"
+      ></div>
+
+      <h2 class="title_album">My Crossfit photo album</h2>
+
+      <section class="photo_album padding-responive">
+        <div>
+          <img
+            class="photo"
+            onclick="renderFiltered(0)"
+            src="./img/Backsquat.jpg"
+          />
+          <img
+            class="photo"
+            onclick="renderFiltered(1)"
+            src="./img/barbell.jpg"
+          />
+          <img
+            class="photo"
+            onclick="renderFiltered(2)"
+            src="./img/biking.jpg"
+          />
+          <img
+            class="photo"
+            onclick="renderFiltered(3)"
+            src="./img/clean.jpg"
+          />
+          <img
+            class="photo"
+            onclick="renderFiltered(4)"
+            src="./img/coaching.jpg"
+          />
+          <img
+            class="photo"
+            onclick="renderFiltered(5)"
+            src="./img/dumbells.jpg"
+          />
+          <img
+            class="photo"
+            onclick="renderFiltered(6)"
+            src="./img/dynamic.jpg"
+          />
+          <img
+            class="photo"
+            onclick="renderFiltered(7)"
+            src="./img/jumpropes.jpg"
+          />
+          <img
+            class="photo"
+            onclick="renderFiltered(8)"
+            src="./img/kettlebell.jpg"
+          />
+          <img
+            class="photo"
+            onclick="renderFiltered(9)"
+            src="./img/pistolsquat.jpg"
+          />
+          <img
+            class="photo"
+            onclick="renderFiltered(10)"
+            src="./img/pushup.jpg"
+          />
+          <img
+            class="photo"
+            onclick="renderFiltered(11)"
+            src="./img/rings.jpg"
+          />
+          <img
+            class="photo"
+            onclick="renderFiltered(12)"
+            src="./img/ropeclimb.jpg"
+          />
+          <img
+            class="photo"
+            onclick="renderFiltered(13)"
+            src="./img/rowing.jpg"
+          />
+          <img
+            class="photo"
+            onclick="renderFiltered(14)"
+            src="./img/running.jpg"
+          />
+          <img
+            class="photo"
+            onclick="renderFiltered(15)"
+            src="./img/stretching.jpg"
+          />
+          <img
+            class="photo"
+            onclick="renderFiltered(16)"
+            src="./img/teamworkout.jpg"
+          />
+          <img
+            class="photo"
+            onclick="renderFiltered(17)"
+            src="./img/tireflip.jpg"
+          />
+          <img class="photo" onclick="renderFiltered(18)" src="./img/trx.jpg" />
+          <img
+            class="photo"
+            onclick="renderFiltered(19)"
+            src="./img/wallball.jpg"
+          />
+          <img
+            class="photo"
+            onclick="renderFiltered(20)"
+            src="./img/yoga.jpg"
+          />
+        </div>
+      </section>
+
+      <section id="content" class="padding-responive"></section>
+    </main>
+
+    <footer id="footer" class="padding-responive">
+      <img src="./img/assets/favicon_fotogram.png" alt="Logo Fotogram" />
+      <p>Fotogram by Tom Steimann</p>
+    </footer>
+  </body>
+  <script src="./script.js"></script>
+</html>
