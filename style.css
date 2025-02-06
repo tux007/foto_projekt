@@ -1,656 +1,612 @@
 body {
-    margin: 0;
-    font-family: "Lato", sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: rgb(5, 23, 30);
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: rgb(5, 23, 30);
 }
 
 /* Add Lato font-family */
-h1, h2, h3 {
-    font-family: "Lato", sans-serif;
+h1,
+h2,
+h3 {
+  font-family: "Lato", sans-serif;
 }
 
 h1 {
-    font-size: 36px;
-    font-weight: 800;
-    margin-top: 0;
-    margin-bottom: 0;
+  font-size: 36px;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 0;
 }
-
 
 h2 {
-    font-size: 32px;
-    font-weight: 600;
+  font-size: 32px;
+  font-weight: 600;
 }
-
 
 h3 {
-    font-size: 20px;
-    font-weight: 600;
+  font-size: 20px;
+  font-weight: 600;
 }
-
 
 .padding-responive {
-    padding-left: 64px;
-    padding-right: 64px;
+  padding-left: 64px;
+  padding-right: 64px;
 }
-
 
 header {
-    color: white;
-    background-color: rgb(8, 32, 41);
-    height: 80px;
-    padding-top: 16px;
-    display: flex;
-    justify-content: center;
-    gap: 1200px;
+  color: white;
+  background-color: rgb(8, 32, 41);
+  height: 80px;
+  padding-top: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 1200px;
 }
-
 
 header div {
-    display: flex;
+  display: flex;
 }
-
 
 .logo {
-    height: 48px;
+  height: 48px;
 }
-
 
 .header_title {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
-
 
 .header_addition p {
-    font-family: "Caveat", cursive;
-    color: rgb(212, 149, 112);
-    font-size: 18px;
-    font-weight: 900;
-    margin-top: 0;
-    margin-bottom: 0;
+  font-family: "Caveat", cursive;
+  color: rgb(212, 149, 112);
+  font-size: 18px;
+  font-weight: 900;
+  margin-top: 0;
+  margin-bottom: 0;
 }
-
 
 .darkmode_on {
-    width: 40px;
-    height: 40px;
-    margin-top: 12px;
-    filter: brightness(90%);
+  width: 40px;
+  height: 40px;
+  margin-top: 12px;
+  filter: brightness(90%);
 }
-
 
 .darkmode_on:hover {
-    filter: invert() brightness(90%) drop-shadow(0px 0px 4px white);
-    cursor: pointer;
+  filter: invert() brightness(90%) drop-shadow(0px 0px 4px white);
+  cursor: pointer;
 }
-
 
 .darkmode_off {
-    filter: invert();
+  filter: invert();
 }
-
 
 .darkmode_off:hover {
-    filter: drop-shadow(0px 0px 4px black);
+  filter: drop-shadow(0px 0px 4px black);
 }
-
 
 main {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    color: rgba(255, 255, 255, 0.9);
-    width: 100%;
-    flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  flex: 1;
 }
-
 
 .title_album {
-    padding-top: 40px;
+  padding-top: 40px;
 }
-
 
 .photo_album {
-    display: flex;
-    flex-direction: column;
-    padding-top: 24px;
-    padding-bottom: 48px;
-    max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 24px;
+  padding-bottom: 48px;
+  max-width: 1000px;
 }
-
 
 .photo_album div {
-    gap: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
 
 .photo {
-    width: 140px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 8px;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
 }
-
 
 .photo:hover {
-    box-shadow: gold 0px 0px 10px;
-    cursor: pointer;
+  box-shadow: gold 0px 0px 10px;
+  cursor: pointer;
 }
-
 
 .overlay {
-    position: fixed;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.375);
-    z-index: 0;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.375);
+  z-index: 0;
 }
-
 
 .d_none {
-    display: none;
+  display: none;
 }
-
 
 .current_element {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 1000px;
-    height: 800px;
-    margin-top: -416px;
-    margin-left: -516px;
-    padding: 16px;
-    background-color: rgb(8, 32, 41);
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    border-radius: 8px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 1000px;
+  height: 800px;
+  margin-top: -416px;
+  margin-left: -516px;
+  padding: 16px;
+  background-color: rgb(8, 32, 41);
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  border-radius: 8px;
 }
-
 
 #close_btn {
-    background-color: rgba(255, 255, 255, 0.9);
-    border: 0;
-    border-radius: 100%;
-    height: 32px;
-    width: 32px;
-    font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 0;
+  border-radius: 100%;
+  height: 32px;
+  width: 32px;
+  font-size: 20px;
 }
-
 
 #close_btn:hover {
-    box-shadow: gold 0px 0px 10px;
-    cursor: pointer;
+  box-shadow: gold 0px 0px 10px;
+  cursor: pointer;
 }
-
 
 .arrows {
-    height: 80px;
-    width: 44px;
-    filter: invert(80%);
-    position: absolute;
-    object-fit: contain;
-    top: 36%;
+  height: 80px;
+  width: 44px;
+  filter: invert(80%);
+  position: absolute;
+  object-fit: contain;
+  top: 36%;
 }
-
 
 .arrow_left {
-    left: 4%;
+  left: 4%;
 }
-
 
 .arrow_right {
-    right: 4%;
+  right: 4%;
 }
-
 
 .arrows:hover {
-    filter: invert(100%) drop-shadow(0px 0px 10px gold);
-    cursor: pointer;
+  filter: invert(100%) drop-shadow(0px 0px 10px gold);
+  cursor: pointer;
 }
-
 
 .current_element div {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
-
 
 .current_photo {
-    width: 100%;
-    margin-top: 16px;
-    margin-bottom: 20px;
-    border-radius: 8px;
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 20px;
+  border-radius: 8px;
 }
-
 
 .current_element p {
-    font-size: 14px;
-    line-height: 20px;
+  font-size: 14px;
+  line-height: 20px;
 }
-
 
 footer {
-    background-color: rgb(8, 32, 41);
-    color: rgba(255, 255, 255, 0.8);
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-    font-size: 16px;
+  background-color: rgb(8, 32, 41);
+  color: rgba(255, 255, 255, 0.8);
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 16px;
 }
-
 
 footer img {
-    height: 28px;
-    filter: opacity(70%);
+  height: 28px;
+  filter: opacity(70%);
 }
-
 
 .lightmode_footer_header {
-    background-color: #e5ddcd;
-    color: black;
+  background-color: #e5ddcd;
+  color: black;
 }
-
 
 .lightmode_main {
-    background-color: floralwhite;
-    color: black;
+  background-color: floralwhite;
+  color: black;
 }
-
 
 @media (max-width: 1720px) {
-    header {
-        justify-content: space-between;
-        gap: 0;
-    }
+  header {
+    justify-content: space-between;
+    gap: 0;
+  }
 }
-
 
 @media (max-width: 1100px) {
-    .title_album {
-        padding-top: 32px;
-    }
+  .title_album {
+    padding-top: 32px;
+  }
 
-    .photo_album {
-        padding-top: 20px;
-        padding-bottom: 40px;
-    }
+  .photo_album {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
 
-    .photo {
-        width: 124px;
-        height: 124px;
-    }
+  .photo {
+    width: 124px;
+    height: 124px;
+  }
 
-    .current_element {
-        width: 840px;
-        height: 732px;
-        margin-top: -382px;
-        margin-left: -436px;
-    }
+  .current_element {
+    width: 840px;
+    height: 732px;
+    margin-top: -382px;
+    margin-left: -436px;
+  }
 
-    .padding-responive {
-        padding-left: 60px;
-        padding-right: 60px;
-    }
+  .padding-responive {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
 }
-
 
 @media (max-width: 970px) {
-    .padding-responive {
-        padding-left: 64px;
-        padding-right: 64px;
-    }
+  .padding-responive {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
 
-    .photo {
-        width: 156px;
-        height: 156px;
-    }
+  .photo {
+    width: 156px;
+    height: 156px;
+  }
 }
-
 
 @media (max-width: 940px) {
-    .padding-responive {
-        padding-left: 48px;
-        padding-right: 48px;
-    }
+  .padding-responive {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
 
-    .photo:hover {
-        box-shadow: gold 0px 0px 10px;
-    }
+  .photo:hover {
+    box-shadow: gold 0px 0px 10px;
+  }
 
-    .current_element {
-        width: 800px;
-        height: 672px;
-        margin-top: -352px;
-        margin-left: -416px;
-    }
+  .current_element {
+    width: 800px;
+    height: 672px;
+    margin-top: -352px;
+    margin-left: -416px;
+  }
 }
-
 
 @media (max-width: 900px) {
-    .current_element {
-        width: 720px;
-        height: 640px;
-        margin-top: -336px;
-        margin-left: -376px;
-    }
+  .current_element {
+    width: 720px;
+    height: 640px;
+    margin-top: -336px;
+    margin-left: -376px;
+  }
 
-    .current_photo {
-        margin-bottom: 14px;
-    }
+  .current_photo {
+    margin-bottom: 14px;
+  }
 
-    .arrows {
-        height: 72px;
-        width: 40px;
-    }
+  .arrows {
+    height: 72px;
+    width: 40px;
+  }
 }
-
 
 @media (max-width: 830px) {
-    h3 {
-        margin-top: 12px;
-        margin-bottom: 12px;
-    }
+  h3 {
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
 
-    .photo {
-        width: 140px;
-        height: 140px;
-    }
+  .photo {
+    width: 140px;
+    height: 140px;
+  }
 
-    .current_element {
-        width: 640px;
-        height: 576px;
-        margin-top: -288px;
-        margin-left: -336px;
-    }
+  .current_element {
+    width: 640px;
+    height: 576px;
+    margin-top: -288px;
+    margin-left: -336px;
+  }
 
-    .current_photo {
-        margin-top: 10px;
-        margin-bottom: 18px;
-    }
+  .current_photo {
+    margin-top: 10px;
+    margin-bottom: 18px;
+  }
 
-    .current_element p {
-        margin-top: 10px;
-        margin-bottom: 18px;
-    }
+  .current_element p {
+    margin-top: 10px;
+    margin-bottom: 18px;
+  }
 
-    .arrows {
-        height: 64px;
-        width: 36px;
-        top: 34%;
-    }
+  .arrows {
+    height: 64px;
+    width: 36px;
+    top: 34%;
+  }
 }
-
 
 @media (max-width: 740px) {
-    h3 {
-        margin-top: 8px;
-        margin-bottom: 8px;
-    }
+  h3 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
 
-    .photo_album div {
-        gap: 16px;
-    }
+  .photo_album div {
+    gap: 16px;
+  }
 
-    .photo {
-        width: 120px;
-        height: 120px;
-    }
+  .photo {
+    width: 120px;
+    height: 120px;
+  }
 
-    .current_element {
-        width: 560px;
-        height: 520px;
-        margin-top: -276px;
-        margin-left: -296px;
-    }
+  .current_element {
+    width: 560px;
+    height: 520px;
+    margin-top: -276px;
+    margin-left: -296px;
+  }
 
-    .current_photo {
-        margin-bottom: 10px;
-    }
+  .current_photo {
+    margin-bottom: 10px;
+  }
 
-    .current_element p {
-        margin-top: 4px;
-        margin-bottom: 10px;
-    }
+  .current_element p {
+    margin-top: 4px;
+    margin-bottom: 10px;
+  }
 
-    .arrows {
-        height: 56px;
-        width: 30px;
-    }
+  .arrows {
+    height: 56px;
+    width: 30px;
+  }
 }
 
-
 @media (max-width: 630px) {
-    h1 {
-        font-size: 32px;
-        font-weight: 700;
-    }
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+  }
 
-    h2 {
-        font-size: 28px;
-        font-weight: 560;
-    }
+  h2 {
+    font-size: 28px;
+    font-weight: 560;
+  }
 
-    h3 {
-        font-size: 18px;
-        font-weight: 550;
-    }
+  h3 {
+    font-size: 18px;
+    font-weight: 550;
+  }
 
-    header {
-        height: 72px;
-        padding-top: 12px;
-    }
+  header {
+    height: 72px;
+    padding-top: 12px;
+  }
 
-    .header_title {
-        gap: 8px;
-    }
+  .header_title {
+    gap: 8px;
+  }
 
-    .header_addition p {
-        font-size: 16px;
-        font-weight: 700;
-    }
+  .header_addition p {
+    font-size: 16px;
+    font-weight: 700;
+  }
 
-    .logo {
-        height: 40px;
-    }
+  .logo {
+    height: 40px;
+  }
 
-    .darkmode_on {
-        width: 36px;
-        height: 36px;
-    }
+  .darkmode_on {
+    width: 36px;
+    height: 36px;
+  }
 
-    .title_album {
-        padding-top: 24px;
-    }
+  .title_album {
+    padding-top: 24px;
+  }
 
-    .photo_album div {
-        gap: 20px;
-    }
+  .photo_album div {
+    gap: 20px;
+  }
 
-    .current_element {
-        width: 480px;
-        height: 496px;
-        margin-top: -260px;
-        margin-left: -252px;
-        padding: 12px;
-    }
+  .current_element {
+    width: 480px;
+    height: 496px;
+    margin-top: -260px;
+    margin-left: -252px;
+    padding: 12px;
+  }
 
-    .close_btn {
-        height: 30px;
-        width: 30px;
-        font-size: 18px;
-    }
+  .close_btn {
+    height: 30px;
+    width: 30px;
+    font-size: 18px;
+  }
 
-    .current_photo {
-        margin-bottom: 10px;
-    }
+  .current_photo {
+    margin-bottom: 10px;
+  }
 
-    .arrows {
-        height: 56px;
-        width: 30px;
-        top: 30%;
-    }
+  .arrows {
+    height: 56px;
+    width: 30px;
+    top: 30%;
+  }
 
-    footer {
-        height: 72px;
-        font-size: 14px;
-    }
+  footer {
+    height: 72px;
+    font-size: 14px;
+  }
 
-    footer img {
-        height: 20px;
-    }
+  footer img {
+    height: 20px;
+  }
 }
 
 @media (max-width: 540px) {
-    h3 {
-        font-size: 16px;
-    }
+  h3 {
+    font-size: 16px;
+  }
 
-    .current_element {
-        width: 400px;
-        height: 448px;
-        margin-top: -236px;
-        margin-left: -212px;
-    }
+  .current_element {
+    width: 400px;
+    height: 448px;
+    margin-top: -236px;
+    margin-left: -212px;
+  }
 
-    .close_btn {
-        height: 28px;
-        width: 28px;
-    }
+  .close_btn {
+    height: 28px;
+    width: 28px;
+  }
 
-    .arrows {
-        height: 48px;
-        width: 26px;
-    }
+  .arrows {
+    height: 48px;
+    width: 26px;
+  }
 }
-
 
 @media (max-width: 520px) {
-    .padding-responive {
-        padding-left: 32px;
-        padding-right: 32px;
-    }
+  .padding-responive {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 
-    .photo {
-        width: 104px;
-        height: 104px;
-    }
+  .photo {
+    width: 104px;
+    height: 104px;
+  }
 }
-
 
 @media (max-width: 460px) {
-    .darkmode_on {
-        width: 30px;
-        height: 30px;
-    }
+  .darkmode_on {
+    width: 30px;
+    height: 30px;
+  }
 
-    .current_element {
-        width: 328px;
-        height: 448px;
-        margin-top: -236px;
-        margin-left: -176px;
-    }
+  .current_element {
+    width: 328px;
+    height: 448px;
+    margin-top: -236px;
+    margin-left: -176px;
+  }
 
-    .close_btn {
-        height: 24px;
-        width: 24px;
-        font-size: 16px;
-    }
+  .close_btn {
+    height: 24px;
+    width: 24px;
+    font-size: 16px;
+  }
 
-    .arrows {
-        height: 40px;
-        width: 24px;
-        top: 26%;
-    }
+  .arrows {
+    height: 40px;
+    width: 24px;
+    top: 26%;
+  }
 
-    .current_element p {
-        line-height: 18px;
-    }
+  .current_element p {
+    line-height: 18px;
+  }
 }
-
 
 @media (max-width: 420px) {
-    .padding-responive {
-        padding-left: 32px;
-        padding-right: 32px;
-    }
+  .padding-responive {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 
-    .photo_album div {
-        gap: 16px;
-    }
+  .photo_album div {
+    gap: 16px;
+  }
 }
 
-
 @media (max-width: 400px) {
-    h1 {
-        font-size: 24px;
-        font-weight: 600;
-    }
+  h1 {
+    font-size: 24px;
+    font-weight: 600;
+  }
 
-    h2 {
-        font-size: 22px;
-        font-weight: 520;
-    }
+  h2 {
+    font-size: 22px;
+    font-weight: 520;
+  }
 
-    .padding-responive {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
+  .padding-responive {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 
-    .header_title {
-        gap: 6px;
-    }
+  .header_title {
+    gap: 6px;
+  }
 
-    .header_addition p {
-        font-size: 14px;
-        font-weight: 600;
-    }
+  .header_addition p {
+    font-size: 14px;
+    font-weight: 600;
+  }
 
-    .logo {
-        height: 32px;
-    }
+  .logo {
+    height: 32px;
+  }
 
-    .title_album {
-        padding-top: 20px;
-    }
+  .title_album {
+    padding-top: 20px;
+  }
 
-    .photo_album div {
-        gap: 16px;
-    }
+  .photo_album div {
+    gap: 16px;
+  }
 
-    .photo {
-        width: 112px;
-        height: 112px;
-    }
+  .photo {
+    width: 112px;
+    height: 112px;
+  }
 
-    .current_element {
-        width: 280px;
-        height: 440px;
-        margin-top: -232px;
-        margin-left: -152px;
-    }
+  .current_element {
+    width: 280px;
+    height: 440px;
+    margin-top: -232px;
+    margin-left: -152px;
+  }
 
-    .arrows {
-        height: 40px;
-        width: 24px;
-        top: 24%;
-    }
+  .arrows {
+    height: 40px;
+    width: 24px;
+    top: 24%;
+  }
 }
 
 @media (max-width: 319px) {
-    .darkmode_on {
-        display: none;
-    }
+  .darkmode_on {
+    display: none;
+  }
 }
