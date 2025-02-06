@@ -59,9 +59,27 @@ header div {
 }
 
 .header_title {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 16px;
+}
+
+.info_popup {
+  display: none;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 10;
+  width: 200px;
+}
+
+.header_title:hover .info_popup {
+  display: block;
 }
 
 .header_addition p {
