@@ -4,7 +4,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: rgb(5, 23, 30);
+  background-color: rgb(7, 32, 71);
 }
 
 /* Add Lato font-family */
@@ -38,7 +38,7 @@ h3 {
 
 header {
   color: white;
-  background-color: rgb(8, 32, 41);
+  background-color: rgb(7, 23, 57);
   height: 80px;
   padding-top: 16px;
   display: flex;
@@ -212,7 +212,7 @@ main {
 }
 
 footer {
-  background-color: rgb(8, 32, 41);
+  background-color: rgb(7, 23, 57);
   color: rgba(255, 255, 255, 0.8);
   height: 80px;
   display: flex;
@@ -228,12 +228,12 @@ footer img {
 }
 
 .lightmode_footer_header {
-  background-color: #e5ddcd;
+  background-color: #bab5ab;
   color: black;
 }
 
 .lightmode_main {
-  background-color: floralwhite;
+  background-color: rgb(253, 242, 220);
   color: black;
 }
 
