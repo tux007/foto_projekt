@@ -1,4 +1,4 @@
-let Imgs = [
+let imgs = [
   "Backsquat.jpg",
   "barbell.jpg",
   "biking.jpg",
@@ -22,7 +22,7 @@ let Imgs = [
   "yoga.jpg",
 ];
 
-let Name = [
+let imgDescription = [
   "Backsquat",
   "Barbell (Hantelstange)",
   "Biking",
@@ -53,8 +53,8 @@ let currentNumber = [];
 function renderFiltered(number) {
   toggleOverlay();
 
-  currentPhoto = Imgs;
-  currentDescription = Name;
+  currentPhoto = imgs;
+  currentDescription = imgDescription;
   currentNumber = number;
 
   render(currentNumber);
@@ -83,10 +83,11 @@ function getNoteTemplate(i) {
   return `<div class="current_element" id="current_element">
                 <button id="close_btn" onclick="closeCurrentPhoto()"> x </button>
                 <div>
+                    <p style="text-align: center;">${i + 1} of ${currentPhoto.length}</p>
                     <img class="current_photo" src="./img/${currentPhoto[i]}">
-                    <img class="arrows arrow_left" onclick="LastPhoto()" src="./img/assets/left.png">
-                    <img class="arrows arrow_right" onclick="NextPhoto()" src="./img/assets/right.png">
-                    <h3> ${currentDescription[i]} </h3>
+                    <img class="arrows arrow_left" onclick="lastPhoto()" src="./img/assets/left.png">
+                    <img class="arrows arrow_right" onclick="nextPhoto()" src="./img/assets/right.png">
+                    <h3 style="text-align: center; margin-top: 0px;">${currentDescription[i]}</h3>
                 </div>
             </div>`;
 }
@@ -101,28 +102,28 @@ function toggleOverlay() {
   overlayRef.classList.toggle("d_none");
 }
 
-function LastPhoto() {
+function lastPhoto() {
   toggleOverlay();
 
   if (currentNumber - 1 >= 0) {
     renderFiltered(currentNumber - 1);
   } else {
-    currentNumber = Imgs.length - 1;
+    currentNumber = imgs.length - 1;
     renderFiltered(currentNumber);
   }
 }
 
-function NextPhoto() {
+function nextPhoto() {
   toggleOverlay();
 
-  if (currentNumber + 1 < Imgs.length) {
+  if (currentNumber + 1 < imgs.length) {
     renderFiltered(currentNumber + 1);
   } else {
     renderFiltered(0);
   }
 }
 
-function DarkmodeToggle() {
+function darkmodeToggle() {
   document.getElementById("darkmode_toggle").classList.toggle("darkmode_off");
   document.getElementById("header").classList.toggle("lightmode_footer_header");
   document.getElementById("footer").classList.toggle("lightmode_footer_header");
@@ -136,10 +137,10 @@ document.addEventListener(
     } else {
       switch (event.key) {
         case "ArrowLeft":
-          LastPhoto();
+          lastPhoto();
           break;
         case "ArrowRight":
-          NextPhoto();
+          nextPhoto();
           break;
         case "Escape":
           closeCurrentPhoto();
