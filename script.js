@@ -50,14 +50,31 @@ let currentPhoto = [];
 let currentDescription = [];
 let currentNumber = [];
 
-function renderFiltered(number) {
+document.addEventListener("DOMContentLoaded", () => {
+  generatePhotoAlbum();
+});
+
+function generatePhotoAlbum() {
+  let photoContainer = document.getElementById("photo_container");
+  photoContainer.innerHTML = "";
+  for (let i = 0; i < imgs.length; i++) {
+    let imgElement = document.createElement("img");
+    imgElement.className = "photo";
+    imgElement.src = `./img/${imgs[i]}`;
+    imgElement.alt = imgDescription[i];
+    imgElement.onclick = () => showPhotoDetails(i);
+    photoContainer.appendChild(imgElement);
+  }
+}
+
+function showPhotoDetails(number) {
   toggleOverlay();
 
   currentPhoto = imgs;
   currentDescription = imgDescription;
   currentNumber = number;
 
-  render(currentNumber);
+  displayPhoto(currentNumber);
 
   if (
     document
@@ -71,7 +88,7 @@ function renderFiltered(number) {
   }
 }
 
-function render(currentNumber) {
+function displayPhoto(currentNumber) {
   let contentRef = document.getElementById("content");
   contentRef.innerHTML = "";
   for (let i = currentNumber; i < currentNumber + 1; i++) {
@@ -83,17 +100,21 @@ function getNoteTemplate(i) {
   return `<div class="current_element" id="current_element">
                 <button id="close_btn" onclick="closeCurrentPhoto()"> x </button>
                 <div>
-                    <p style="text-align: center;">${i + 1} of ${currentPhoto.length}</p>
+                    <p style="text-align: center;">${i + 1} of ${
+    currentPhoto.length
+  }</p>
                     <img class="current_photo" src="./img/${currentPhoto[i]}">
                     <img class="arrows arrow_left" onclick="lastPhoto()" src="./img/assets/left.png">
                     <img class="arrows arrow_right" onclick="nextPhoto()" src="./img/assets/right.png">
-                    <h3 style="text-align: center; margin-top: 0px;">${currentDescription[i]}</h3>
+                    <h3 style="text-align: center; margin-top: 0px;">${
+                      currentDescription[i]
+                    }</h3>
                 </div>
             </div>`;
 }
 
 function closeCurrentPhoto() {
-  renderFiltered();
+  showPhotoDetails();
   document.getElementById("overlay").classList.add("d_none");
 }
 
@@ -106,10 +127,10 @@ function lastPhoto() {
   toggleOverlay();
 
   if (currentNumber - 1 >= 0) {
-    renderFiltered(currentNumber - 1);
+    showPhotoDetails(currentNumber - 1);
   } else {
     currentNumber = imgs.length - 1;
-    renderFiltered(currentNumber);
+    showPhotoDetails(currentNumber);
   }
 }
 
@@ -117,9 +138,9 @@ function nextPhoto() {
   toggleOverlay();
 
   if (currentNumber + 1 < imgs.length) {
-    renderFiltered(currentNumber + 1);
+    showPhotoDetails(currentNumber + 1);
   } else {
-    renderFiltered(0);
+    showPhotoDetails(0);
   }
 }
 
